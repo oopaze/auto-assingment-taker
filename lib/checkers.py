@@ -8,7 +8,7 @@ class BaseAssignmentChecker:
 
 
 class BossPowerAssigmentChecker(BaseAssignmentChecker):
-    MIN_PRICE = 0.5
+    MIN_PRICE = 5
 
     def check(self, assignment: Assignment) -> bool:
         title_has_boss_power = "boss power" in assignment.title.lower()
@@ -18,7 +18,7 @@ class BossPowerAssigmentChecker(BaseAssignmentChecker):
     
 
 class LairBossKillAssignmentChecker(BaseAssignmentChecker):
-    MIN_PRICE = 0.5
+    MIN_PRICE = 5
     MAX_BOSS_KILLS = 15
 
     def extract_boss_kills(self, description: str) -> int | None:
